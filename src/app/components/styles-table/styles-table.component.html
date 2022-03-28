@@ -1,0 +1,64 @@
+
+simople
+
+<div class="container">
+<!-- 
+    <thead >
+        <tr style="display: flex;">
+          <th>Column 1</th>
+          <th>Column 2</th>
+          <th>Column 2</th>
+          <th>Column 2</th>
+          <th>Column 2</th>
+          <th>Column 1</th>
+          <th>Column 2</th>
+          <th>Column 2</th>
+          <th>Column 2</th>
+          <th>Column 2</th>
+        </tr>
+      </thead> -->
+
+      <table>
+
+        
+            <thead >
+                <tr>
+                    <th>Column 1</th>
+                    <th>Column 2</th>
+            
+                </tr>
+            </thead>
+
+            <tbody >
+        <!-- 
+
+                    <tr>
+                        <td *cdkVirtualFor="let row of rows">{{row.col1}}</td>
+
+                    </tr> -->
+
+                    <!-- <tr *ngFor="let row of rows">
+                        <td>{{row.col1}}</td>
+                        <td>{{row.col2}}</td>
+                    </tr> -->
+
+                    
+                    <!-- <tr *ngFor="let row of rows">
+                        <td>{{row.col1}}</td>
+                        <td>{{row.col2}}</td>
+                    </tr> -->
+
+                    <cdk-virtual-scroll-viewport #scrollViewport itemSize="59" >
+                            <tr *cdkVirtualFor="let row of rows">
+                                <td>{{row.col1}}</td>
+                                <td>{{row.col2}}</td>
+                            </tr>
+                    </cdk-virtual-scroll-viewport>
+
+            
+
+
+            </tbody>
+
+      </table>
+</div>

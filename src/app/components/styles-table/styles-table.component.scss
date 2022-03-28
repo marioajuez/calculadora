@@ -1,0 +1,47 @@
+// .tableFixHead {
+//     width: 500px;
+//     height: 40vh;
+//     table-layout: fixed;
+//     border-collapse: collapse;
+//   }
+//     .tableFixHead tbody {
+//     display: block;
+//     width: 100%;
+//     overflow: auto;
+//     height: 50px;
+//   }
+//   .tableFixHead thead tr {
+//     display: block;
+//   }
+//   .tableFixHead th,
+//   .tableFixHead  td {
+//     padding: 5px 10px;
+//     width: 200px;
+//   }
+//   th {
+//     background: #ABDD93;
+//   }  
+.container{
+
+
+    height: 50px;
+    padding-top: 40px;
+    position: relative;
+}
+
+    
+  cdk-virtual-scroll-viewport {
+    height: 40vh;
+    width: 100%;
+    table {
+        width: 100%;
+
+    }
+  }
+
+
+  tbody tr {
+    height: 50px;
+  }
+
+  

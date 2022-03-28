@@ -1,0 +1,39 @@
+
+simople
+
+<div class="container">
+    <cdk-virtual-scroll-viewport #scrollViewport itemSize="59" >
+      <table>
+        <thead>
+          <tr>
+            <th [style.top]="inverseOfTranslation">Column 1</th>
+            <th [style.top]="inverseOfTranslation">Column 2</th>
+            <th [style.top]="inverseOfTranslation">Column 2</th>
+            <th [style.top]="inverseOfTranslation">Column 2</th>
+            <th [style.top]="inverseOfTranslation">Column 2</th>
+            <th [style.top]="inverseOfTranslation">Column 1</th>
+            <th [style.top]="inverseOfTranslation">Column 2</th>
+            <th [style.top]="inverseOfTranslation">Column 2</th>
+            <th [style.top]="inverseOfTranslation">Column 2</th>
+            <th [style.top]="inverseOfTranslation">Column 2</th>
+  
+  
+          </tr>
+        </thead>
+        <tbody>
+          <tr *cdkVirtualFor="let row of rows">
+            <td>{{row.col1}}</td>
+            <td>{{row.col2}}</td>
+            <td>{{row.col2}}</td>
+            <td>{{row.col2}}</td>
+            <td>{{row.col2}}</td>
+            <td>{{row.col1}}</td>
+            <td>{{row.col2}}</td>
+            <td>{{row.col2}}</td>
+            <td>{{row.col2}}</td>
+            <td>{{row.col2}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </cdk-virtual-scroll-viewport>
+  </div>
