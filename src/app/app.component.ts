@@ -1,11 +1,8 @@
 import { Component } from '@angular/core';
-import { TableVirtualScrollDataSource } from 'ng-table-virtual-scroll';
+import { DataTable } from './models/hyper';
+import { HyperService } from './services/hyper.service';
 
 
-const DATA = Array.from({length: 1000}, (v, i) => ({
-  id: i + 1,
-  name: `Element #${i + 1}`
-}));
 
 @Component({
   selector: 'app-root',
@@ -13,10 +10,34 @@ const DATA = Array.from({length: 1000}, (v, i) => ({
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'calculadora3';
 
-  displayedColumns = ['id', 'name'];
+  public dataTable:Array<DataTable>
 
-  dataSource = new TableVirtualScrollDataSource(DATA);
+
+  constructor(
+    public hyperService:HyperService
+  ){
+    this.hyperService.setStartMembership(300);
+  }
+
+  ngOnInit(){
+
+    this.dataTable = Array.from({length: 600}, (v, i) => (
+      {
+        days: 1,
+        date: new Date(),
+        amount:0,
+        dailyInterest:0,
+        dailyRewards:0,
+        membershipBalance:0,
+        rebuy:0,
+        isCheck:true,
+        index: 1
+    }));
+
+    console.log( this.dataTable);
+
+  
+  }
 }
 
