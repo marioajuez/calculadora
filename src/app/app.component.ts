@@ -11,33 +11,55 @@ import { HyperService } from './services/hyper.service';
 })
 export class AppComponent {
 
-  public dataTable:Array<DataTable>
+  
+  // --------- variables to store calculations ------------
+  private rebuy;
+  private amount;
+  private dailyRewards;
+  private membershipBalance
 
+  public dataTable:Array<DataTable>;
 
   constructor(
     public hyperService:HyperService
-  ){
-    this.hyperService.setStartMembership(300);
-  }
+  ){}
 
   ngOnInit(){
 
-    this.dataTable = Array.from({length: 600}, (v, i) => (
-      {
-        days: 1,
-        date: new Date(),
-        amount:0,
-        dailyInterest:0,
-        dailyRewards:0,
-        membershipBalance:0,
-        rebuy:0,
-        isCheck:true,
-        index: 1
-    }));
-
-    console.log( this.dataTable);
-
+    this.dataTable = this.createTable();
+    this.amount = 300;
+    this.membershipBalance = this.amount * 3 - this.amount * 0.005;
+    this.dailyRewards =  this.amount * 0.005;
+    this.rebuy =parseFloat((this.dailyRewards / 50.0).toString().split('.')[0]) * 50.0;
   
+    this.dataTable= this.hyperService.calculate(this.dataTable, {
+      days: 1,
+      amount: this.amount,
+      dailyRewards: this.dailyRewards,
+      membershipBalance: this.membershipBalance,
+      rebuy:this.rebuy,
+      isCheck: false,
+      index:-1
+    },
+    { rebuyAlways:true}
+    );
   }
+
+  private createTable(): Array<DataTable>{
+    return Array.from({length:600}, (v,i) => (
+      {
+        days: i + 1,
+        date: new Date().setDate(
+          new Date().getDate() + i),
+        amount:null,
+        dailyInterest:null,
+        dailyRewards:null,
+        membershipBalance:null,
+        rebuy:null,
+        isCheck:true,
+        index: i 
+    }));
+  }
+  
 }
 

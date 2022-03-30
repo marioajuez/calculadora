@@ -6,13 +6,15 @@ import { MaterialModule } from '../shared/material.module';
 import { TableVirtualScrollModule } from 'ng-table-virtual-scroll';
 import { TableSimpleComponent } from './table-simple/table-simple.component';
 import { StylesTableComponent } from './styles-table/styles-table.component';
+import { TableHyperComponent } from './table-hyper/table-hyper.component';
 
 
 @NgModule({
   declarations: [
     TableComponent,
     TableSimpleComponent,
-    StylesTableComponent
+    StylesTableComponent,
+    TableHyperComponent
   ],
   imports: [
     CommonModule,
@@ -24,7 +26,8 @@ import { StylesTableComponent } from './styles-table/styles-table.component';
   exports:[
     TableComponent,
     TableSimpleComponent,
-    StylesTableComponent
+    StylesTableComponent,
+    TableHyperComponent
   ]
 })
 export class ComponentsModule { }
