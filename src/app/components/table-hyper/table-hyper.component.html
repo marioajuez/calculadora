@@ -1,6 +1,6 @@
 <!-- <p>table-hyper works!</p> -->
 
-<cdk-virtual-scroll-viewport tvsItemSize='48'>
+<cdk-virtual-scroll-viewport [tvsItemSize]='22'>
     <table mat-table [dataSource]="dataSource" style="position: relative;">
       <tr mat-header-row *matHeaderRowDef="displayedColumns;sticky:true"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>

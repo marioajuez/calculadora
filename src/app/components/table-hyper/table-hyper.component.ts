@@ -35,6 +35,16 @@ export class TableHyperComponent implements OnInit {
 
   dataSource = new TableVirtualScrollDataSource();
 
+  virtualScrollItemSize= {
+    xs: '22',
+    sm: '50',
+    md: '60',
+    lg: '70',
+    xl: '70'
+  }
+
+  itemSize:string;
+
   constructor(
     private translate: TranslateService,
     private breakpointObserverService:BreakpointObserverService
@@ -43,7 +53,12 @@ export class TableHyperComponent implements OnInit {
   ngOnInit(): void {
     this.dataSource = new TableVirtualScrollDataSource(this.data);
     this.breakpointObserverService.size$.subscribe ( size =>{
-      console.log(size);
+
+      this.itemSize = this.virtualScrollItemSize[size];
+
+      // console.log(this.virtualScrollItemSize[size]);
     })
+
   }
+
 }
