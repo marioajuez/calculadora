@@ -7,6 +7,7 @@ import { TableVirtualScrollModule } from 'ng-table-virtual-scroll';
 import { TableSimpleComponent } from './table-simple/table-simple.component';
 import { StylesTableComponent } from './styles-table/styles-table.component';
 import { TableHyperComponent } from './table-hyper/table-hyper.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @NgModule({
@@ -20,8 +21,11 @@ import { TableHyperComponent } from './table-hyper/table-hyper.component';
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
+
     MaterialModule,
-    TableVirtualScrollModule
+
+    TableVirtualScrollModule,
+    TranslateModule
   ],
   exports:[
     TableComponent,

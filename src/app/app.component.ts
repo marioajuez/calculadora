@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { DataTable } from './models/hyper';
 import { HyperService } from './services/hyper.service';
 
@@ -20,9 +21,19 @@ export class AppComponent {
 
   public dataTable:Array<DataTable>;
 
+
+    langs: string[] = [];
+
   constructor(
+    private translate: TranslateService,
     public hyperService:HyperService
-  ){}
+
+  ){
+    this.translate.setDefaultLang('en');
+    this.translate.use('en');
+    this.translate.addLangs(['en', 'es','fr']);
+    console.log(this.langs)
+  }
 
   ngOnInit(){
 

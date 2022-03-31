@@ -1,17 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Data } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { TableVirtualScrollDataSource } from 'ng-table-virtual-scroll';
 import { DataTable } from 'src/app/models/hyper';
 
-// const DATA = Array.from({length: 1000}, (v, i) => ({
-//   // id: i + 1,
-//   // name: `   #${i + 1}`,
-//   // name_3: ` #${i + 1}`,
-//   // name_4: ` #${i + 1}`,
-//   // name_5: ` #${i + 1}`,
-//   // name_6: ` #${i + 1}`,
-
-// }));
 
 const DATA:Array<DataTable> = Array.from({length:600}, (v,i) => (
   {
@@ -42,7 +34,9 @@ export class TableHyperComponent implements OnInit {
 
   dataSource = new TableVirtualScrollDataSource();
 
-  constructor() {}
+  constructor(
+    private translate: TranslateService
+  ) {}
 
   ngOnInit(): void {
     this.dataSource = new TableVirtualScrollDataSource(DATA);
