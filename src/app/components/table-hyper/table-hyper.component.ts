@@ -3,6 +3,7 @@ import { Data } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { TableVirtualScrollDataSource } from 'ng-table-virtual-scroll';
 import { DataTable } from 'src/app/models/hyper';
+import { BreakpointObserverService } from 'src/app/services/utils/breakpoint-observer.service';
 
 
 const DATA:Array<DataTable> = Array.from({length:600}, (v,i) => (
@@ -35,14 +36,14 @@ export class TableHyperComponent implements OnInit {
   dataSource = new TableVirtualScrollDataSource();
 
   constructor(
-    private translate: TranslateService
+    private translate: TranslateService,
+    private breakpointObserverService:BreakpointObserverService
   ) {}
 
   ngOnInit(): void {
-    this.dataSource = new TableVirtualScrollDataSource(DATA);
-
-    // this.dataSource = new TableVirtualScrollDataSource(DATA);
-
-    console.log(this.data);
+    this.dataSource = new TableVirtualScrollDataSource(this.data);
+    this.breakpointObserverService.size$.subscribe ( size =>{
+      console.log(size);
+    })
   }
 }
