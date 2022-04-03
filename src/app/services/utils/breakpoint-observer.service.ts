@@ -2,6 +2,14 @@ import { Injectable } from '@angular/core';
 import { fromEvent, Observable } from 'rxjs';
 import { startWith, map, distinctUntilChanged, shareReplay } from 'rxjs/operators';
 
+
+
+// $sm:576px;
+// $md:768px;
+// $lg:992px;
+// $xl:1200px;
+
+
 const QUERY: Map<string, string> = new Map([
   ['xl', '(min-width: 1200px)'],
   ['lg', '(min-width: 992px)'],

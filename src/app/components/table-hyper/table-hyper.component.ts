@@ -4,6 +4,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { TableVirtualScrollDataSource } from 'ng-table-virtual-scroll';
 import { DataTable } from 'src/app/models/hyper';
 import { BreakpointObserverService } from 'src/app/services/utils/breakpoint-observer.service';
+// import { virtualScrollParams as virtualScroll } from './constants-responvise';
 
 
 const DATA:Array<DataTable> = Array.from({length:600}, (v,i) => (
@@ -20,6 +21,29 @@ const DATA:Array<DataTable> = Array.from({length:600}, (v,i) => (
     index: i 
 }));
 
+export const virtualScrollParams= {
+  xs: {
+    headerHeight: '30',
+    tvsItemSize:  '24'
+  },
+  sm: {
+    headerHeight: '40',
+    tvsItemSize:  '24'
+  },
+  md: {
+    headerHeight: '40',
+    tvsItemSize:  '48'
+  },
+  lg: {
+    headerHeight: '40',
+    tvsItemSize:  '48'
+  },
+  xl: {
+    headerHeight: '40',
+    tvsItemSize:  '48'
+  }
+}
+
 
 @Component({
   selector: 'table-hyper',
@@ -35,15 +59,8 @@ export class TableHyperComponent implements OnInit {
 
   dataSource = new TableVirtualScrollDataSource();
 
-  virtualScrollItemSize= {
-    xs: '22',
-    sm: '50',
-    md: '60',
-    lg: '70',
-    xl: '70'
-  }
+  public itemSize: {headerHeight:string, tvsItemSize:string};
 
-  itemSize:string;
 
   constructor(
     private translate: TranslateService,
@@ -54,9 +71,8 @@ export class TableHyperComponent implements OnInit {
     this.dataSource = new TableVirtualScrollDataSource(this.data);
     this.breakpointObserverService.size$.subscribe ( size =>{
 
-      this.itemSize = this.virtualScrollItemSize[size];
+      this.itemSize= virtualScrollParams[size];
 
-      // console.log(this.virtualScrollItemSize[size]);
     })
 
   }

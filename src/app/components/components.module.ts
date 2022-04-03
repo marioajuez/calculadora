@@ -10,12 +10,14 @@ import { TableHyperComponent } from './table-hyper/table-hyper.component';
 import { TranslateModule } from '@ngx-translate/core';
 
 
+
 @NgModule({
   declarations: [
     TableComponent,
     TableSimpleComponent,
     StylesTableComponent,
-    TableHyperComponent
+    TableHyperComponent,
+
   ],
   imports: [
     CommonModule,
