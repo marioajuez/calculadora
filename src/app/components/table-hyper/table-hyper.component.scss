@@ -1,7 +1,6 @@
-$sm: 576px;
-$md: 768px;
-$lg: 992px;
-$xl: 1200px;
+
+@import '../../../variables.scss';
+
 
 $color-hyper: #7c3ec9;
 
@@ -18,7 +17,6 @@ $color-hyper: #7c3ec9;
 
       table,
       mat-table {
-
         width: 100%;
 
         .header {
@@ -52,7 +50,7 @@ $color-hyper: #7c3ec9;
       }
     }
 
-    @media only screen and (max-width: $md) {
+    @media only screen and (max-width:$md) {
       cdk-virtual-scroll-viewport {
         height: 96vh;
 
@@ -82,7 +80,8 @@ $color-hyper: #7c3ec9;
             white-space: pre-line !important;
 
             &.mat-header-row {
-              height: auto;
+              // height: auto;
+              height: 30px !important;
             }
 
             &.mat-row,

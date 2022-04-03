@@ -27,19 +27,19 @@ export const virtualScrollParams= {
     tvsItemSize:  '24'
   },
   sm: {
-    headerHeight: '40',
+    headerHeight: '30',
     tvsItemSize:  '24'
   },
   md: {
-    headerHeight: '40',
+    headerHeight: '42',
     tvsItemSize:  '48'
   },
   lg: {
-    headerHeight: '40',
+    headerHeight: '42',
     tvsItemSize:  '48'
   },
   xl: {
-    headerHeight: '40',
+    headerHeight: '42',
     tvsItemSize:  '48'
   }
 }
@@ -72,6 +72,7 @@ export class TableHyperComponent implements OnInit {
     this.breakpointObserverService.size$.subscribe ( size =>{
 
       this.itemSize= virtualScrollParams[size];
+      console.log(size)
 
     })
 

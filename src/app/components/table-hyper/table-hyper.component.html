@@ -1,4 +1,4 @@
-<cdk-virtual-scroll-viewport [tvsItemSize]='itemSize.tvsItemSize' headerHeight="42"  class="custom-virtual-scroll">
+<cdk-virtual-scroll-viewport [tvsItemSize]='itemSize.tvsItemSize' [headerHeight]='itemSize.headerHeight' class="custom-virtual-scroll">
     <table mat-table [dataSource]="dataSource" style="position: relative;">
       <tr mat-header-row *matHeaderRowDef="displayedColumns;sticky:true"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
