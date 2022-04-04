@@ -8,6 +8,9 @@ import { TableSimpleComponent } from './table-simple/table-simple.component';
 import { StylesTableComponent } from './styles-table/styles-table.component';
 import { TableHyperComponent } from './table-hyper/table-hyper.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import { FooterComponent } from './footer/footer.component';
+import { FormCalcComponent } from './form-calc/form-calc.component';
 
 
 
@@ -17,6 +20,9 @@ import { TranslateModule } from '@ngx-translate/core';
     TableSimpleComponent,
     StylesTableComponent,
     TableHyperComponent,
+    ToolbarComponent,
+    FooterComponent,
+    FormCalcComponent,
 
   ],
   imports: [
@@ -33,7 +39,10 @@ import { TranslateModule } from '@ngx-translate/core';
     TableComponent,
     TableSimpleComponent,
     StylesTableComponent,
-    TableHyperComponent
+    TableHyperComponent,
+    ToolbarComponent,
+    FooterComponent,
+    FormCalcComponent,
   ]
 })
 export class ComponentsModule { }

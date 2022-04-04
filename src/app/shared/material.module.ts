@@ -39,6 +39,7 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 @NgModule({
@@ -53,6 +54,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     CdkTableModule,
     MatProgressBarModule,
     MatProgressSpinnerModule,
+    MatTooltipModule,
     MatPaginatorModule,
     MatExpansionModule,
     MatNativeDateModule,

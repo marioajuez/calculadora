@@ -1,0 +1,61 @@
+@import '../../../variables.scss';
+
+$color-hyper: #7c3ec9;
+
+.mat-toolbar {
+    background-color: $color-hyper;
+    position: fixed;
+    top: 0;
+    z-index: 999999;
+    color: white;
+}
+
+.toolbar-title {
+    width: 80%;
+}
+
+.toolbar-languaje {
+    display: flex;
+    width: 20%;
+    justify-content: space-around;
+}
+
+.toolbar-languaje>span {
+    font-size: 75%;
+    cursor: pointer;
+}
+
+
+// @media only screen and (max-width: $md) {
+
+//     .toolbar-title {
+//         width: 70% !important;
+//     }
+
+//     .toolbar-languaje {
+//         width: 100% !important;
+//     }
+
+//     .toolbar-languaje>span {
+//         font-size: 75%;
+//         cursor: pointer;
+//         display: flex;
+//         justify-content: none;
+//         padding-right: 7px;
+//         padding-left: 7px;
+//     }
+
+//     .mat-toolbar-row>span {
+//         font-size: 75%;
+//     }
+
+//     .mat-toolbar {
+//         min-height: auto !important;
+//         height: 24px !important;
+//     }
+
+//     .mat-toolbar-row {
+//         min-height: auto !important;
+//         height: 24px !important;
+//     }
+// }

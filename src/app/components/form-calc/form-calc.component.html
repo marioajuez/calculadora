@@ -1,0 +1,20 @@
+<!-- <p>form-calc works!</p>
+ -->
+
+ <form [formGroup]="formControl">
+     <div style="display: flex; flex-direction: column;">
+
+        <mat-form-field appearance="outline">
+            <mat-label>{{'date_initial' | translate }}</mat-label>
+            <input matInput type="text" placeholder="Ejm. 786789" maxLength="100" formControlName="date">
+        </mat-form-field>
+    
+        <mat-form-field appearance="fill">
+            <mat-label>{{ 'start_membership' | translate}}</mat-label>
+            <input matInput type="text" placeholder="Ejm. 786789" maxLength="100" formControlName="membership">
+        </mat-form-field>
+
+     </div>
+
+
+</form>
