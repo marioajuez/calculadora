@@ -2,7 +2,12 @@
     <mat-toolbar-row>
         <!-- <span class="toolbar-title"> Rebuy Calculator</span> -->
         <div class="toolbar-languaje">
-            <span *ngFor="let lang of langs" value=lang matTooltip="cambiar idioma"> {{ lang | uppercase}}</span>
+            <span *ngFor="let lang of langs" value=lang matTooltip="cambiar idioma"  mat-ripple> {{ lang | uppercase}}</span>
         </div>
     </mat-toolbar-row>
 </mat-toolbar>
+<!-- 
+matRippleDisabled]="(id === activeIndicator)" [ngStyle]="{ 
+    'border-left': id === activeIndicator ? 'solid 4px black': 'solid 4px '+ item.color , 
+    'background': id === activeIndicator ? '#c3c3c357': 'white',
+    'cursor' : id === activeIndicator ? 'default' :'pointer' -->

@@ -1,0 +1,152 @@
+$sm:576px;
+$md:768px;
+$lg:992px;
+$xl:1200px;
+
+
+
+
+
+  .container-table .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+
+
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+
+input.example-right-align {
+  -moz-appearance: textfield;
+}
+
+
+
+.message-block .error-message {
+  // Hidden by default
+  display: none;
+}
+.message-block .error-message:first-child {
+  display: block;
+}
+
+
+
+::ng-deep.mat-form-field-appearance-fill .mat-form-field-flex {
+  background: white !important;
+  /* background-color: rgba(0,0,0,.04); */
+}
+
+.header-flex{
+  display: flex;
+  width: 100%;
+  margin: 0 0 20px 0;
+  border-radius: 15px;
+  background: rgb(255, 255, 255);
+  box-shadow: 0 5px 5px -3px rgb(0 0 0 / 20%), 0 8px 10px 1px rgb(0 0 0 / 14%), 0 3px 14px 2px rgb(0 0 0 / 12%);
+}
+.header-flex > .content-header > span:first-child{
+  // color: #69f0ae
+  color: black;
+  font-weight: bold;
+ 
+}
+
+.header-flex > .content-header > span{
+  font-size: 77%;
+}
+
+.header-flex > .content-header{
+  flex: 1 1 auto;
+  text-align: center;
+  margin: 5px;  /* and that, will result in a 10px gap */
+}
+
+
+
+
+form{
+  padding-bottom: 5%;
+  background: white;
+}
+
+.content-header{
+  display: flex;
+  flex-direction: column;
+}
+
+ 
+mat-form-field {
+  padding: 0px 20px 0px 20px;
+  width: 100%;
+}
+
+.item-one > form > mat-form-field:first-child{
+    padding-top: 20px;
+}
+
+
+
+
+.header-flex >.content-header:first-child{
+  padding-left: 15px;
+}
+
+.header-flex >.content-header:last-child{
+  padding-right: 15px;
+}
+
+
+
+@media only screen and (max-width: $md) {
+
+
+  .item-one > form > mat-form-field:first-child, .item-one > form > mat-form-field{
+    padding:0 !important;
+  }
+
+  form{
+    padding-bottom: 0px;
+    padding: 12px 20px 12px 20px;
+  }
+
+  .header-flex > .content-header > span{
+    font-size: 75%;
+  }
+
+  
+  ::ng-deep.mat-form-field-appearance-fill .mat-form-field-flex {
+    padding: 4px 0px 0px 0px !important ;
+    /* background-color: rgba(0,0,0,.04); */
+  }
+
+  h5{
+    margin: 0px !important; 
+  }
+
+
+
+  .header-flex{
+    margin: 0px 0px 0px 0px;
+    position: absolute;
+    top: 35px;
+    z-index: 3;
+    width: auto;
+    background: rgb(255, 255, 255);
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  form {
+    position: relative;
+  }
+
+  // .header-flex)
+  .content-header{
+    margin:0px !important;
+  }
+  .header-flex.shadow-container{
+    border-radius: 13px;
+  }
+}
+

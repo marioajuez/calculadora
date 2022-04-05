@@ -2,10 +2,18 @@
 <app-footer></app-footer>
 
 
-<div style="margin-top: 200px;">
-    <app-form-calc></app-form-calc>
+<div style="padding: 90px 20px 20px;">
+    <!-- <app-form-calc></app-form-calc> -->
 
-</div>
+
+    <div class="flex">
+        <div class="item-one">
+            <app-form-calc></app-form-calc>
+        </div> 
+        <div class="item-two" style="box-shadow: 0 5px 5px -3px rgb(0 0 0 / 20%), 0 8px 10px 1px rgb(0 0 0 / 14%), 0 3px 14px 2px rgb(0 0 0 / 12%)">
+            <table-hyper [data]="dataTable" class="virtual-custom"></table-hyper>
+        </div>
+    </div>
 
 
 

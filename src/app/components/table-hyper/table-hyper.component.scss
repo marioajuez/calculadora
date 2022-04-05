@@ -9,11 +9,12 @@ $color-hyper: #7c3ec9;
 }
 
 :host {
-  display: block;
+  // display: block;
 
   &.virtual-custom {
     cdk-virtual-scroll-viewport {
-      height: 96vh;
+      // height: 96vh;
+      height: 100%;
 
       table,
       mat-table {
@@ -52,7 +53,7 @@ $color-hyper: #7c3ec9;
 
     @media only screen and (max-width:$md) {
       cdk-virtual-scroll-viewport {
-        height: 96vh;
+        height: 100%;
 
         table,
         mat-table {
