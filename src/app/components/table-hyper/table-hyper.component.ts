@@ -35,12 +35,12 @@ export const virtualScrollParams= {
     tvsItemSize:  '48'
   },
   lg: {
-    headerHeight: '42',
-    tvsItemSize:  '48'
+    headerHeight: '60',
+    tvsItemSize:  '50'
   },
   xl: {
-    headerHeight: '42',
-    tvsItemSize:  '48'
+    headerHeight: '60',
+    tvsItemSize:  '50'
   }
 }
 
@@ -57,7 +57,7 @@ export class TableHyperComponent implements OnInit {
 
   public displayedColumns: string[] = ['day','date','amount','dailyInterest','dailyRewards','rebuy','balance'];
 
-  dataSource = new TableVirtualScrollDataSource();
+  public dataSource = new TableVirtualScrollDataSource();
 
   public itemSize: {headerHeight:string, tvsItemSize:string};
 

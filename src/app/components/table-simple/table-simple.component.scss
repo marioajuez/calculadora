@@ -1,6 +1,4 @@
-.container {
-    height: 100vh;
-    background-color: #ffffff;
+
   
     cdk-virtual-scroll-viewport {
       height: 100%;
@@ -25,8 +23,93 @@
           height: 59px;
           border-bottom: 1px solid #d0d0d0;
           padding: 7px 20px 7px 7px;
-  
         }
+
+
+        
+        tr:nth-child(odd) {
+            background-color: rgb(255, 255, 255);
+            }
+
+        tr:nth-child(even) {
+              background-color: #e9e9e9;
+
+          }
+        
       }
     }
-  }
+  
+
+
+@import '../../../variables.scss';
+
+
+$color-hyper: #7c3ec9;
+
+
+
+// :host {
+//   // display: block;
+
+//     cdk-virtual-scroll-viewport {
+//       // height: 96vh;
+//       height: 100%;
+
+//       table,
+//       mat-table {
+//         width: 100%;
+
+//         th{
+//           &.mat-header-cell {
+
+//             background: rgb(255, 255, 255);
+//             text-align: center;
+
+//             &:last-of-type{
+//               padding-right: 0px !important;
+//             }
+//             &:first-of-type {
+//               padding-left: 0px !important;
+//             }
+//           }
+//         }
+
+//         tr{
+
+//           &.mat-header-row {
+//             height: 60px !important;
+//           }
+
+//           &.mat-row{
+
+//             height: 50px !important;
+
+//             &:nth-child(odd) {
+//             background-color: rgb(255, 255, 255);
+//             }
+
+//             &:nth-child(even) {
+//               background-color: #e9e9e9;
+//             }
+//           }
+
+//           td{
+//             &.mat-cell{
+//               border-right: rgba(0, 0, 0, .12) solid 1px;
+//               text-align: center;
+
+//               &:last-of-type{
+//                 padding-right: 0px !important;
+//               }
+
+//               &:first-of-type{
+//                 padding-left: 0px !important;
+//               }
+//             }
+//           }
+
+//         }
+   
+//       }
+//     }
+// }

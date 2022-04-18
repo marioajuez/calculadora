@@ -57,7 +57,8 @@ export class AppComponent {
   }
 
   private createTable(): Array<DataTable>{
-    return Array.from({length:600}, (v,i) => (
+
+      return Array.from({length:600}, (v,i) => (
       {
         days: i + 1,
         date: new Date().setDate(
@@ -71,6 +72,8 @@ export class AppComponent {
         index: i 
     }));
   }
+
+
   
 }
 
