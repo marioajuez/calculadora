@@ -73,127 +73,16 @@ $xl:1200px;
 
 $color-hyper: #7c3ec9;
 
-.color-background{
-  background: #ededed;
-  position: relative;
-  min-height: 100vh;
-  // height:100%;
-  // height: 97vh;
-}
 
-table, mat-table{
-    width: 100%;
-    // box-shadow: none;
-}
-.mat-header-cell{
-    background: white;
-    // background-color: #3f51b5;
-    // color: white;
-}
-
-.make{
-    background-color: lightblue;
-}
-
-.marker{
-    color: $color-hyper;
-    font-weight: bold;
-    font-style: italic;
-    // font-weight: bold;
-}
-.make-gold .mat-cell {
-    color: rgb(76, 68, 68);
-}
-td.mat-cell{
-    border-right: rgba(0,0,0,.12) solid 1px;
-    text-align: center;
-}
-th.mat-header-cell{
-    text-align: center;
-}
-
-td.mat-cell:last-of-type , th.mat-header-cell:last-of-type{
-    padding-right: 0px !important;
-}
-
-td.mat-cell:first-of-type, th.mat-header-cell:first-of-type{
-    padding-left: 0px !important;
-}
-
-.container-table.mat-elevation-z8 {    
-    overflow-x: auto;
-  }
-  .container-table .mat-table.mat-table {
-    min-width: 450px;
-  }
-
-
-
-
-
-  .hide {
-    display: none !important;
-  }
-
-
-
-  .container-table .mat-form-field + .mat-form-field {
-    margin-left: 8px;
-  }
-
-  input.example-right-align::-webkit-outer-spin-button,
-  input.example-right-align::-webkit-inner-spin-button {
-    display: none;
-  }
-
-input.example-right-align {
-  -moz-appearance: textfield;
+.hide {
+  display: none !important;
 }
 
 
-::ng-deep.mat-form-field-appearance-fill .mat-form-field-flex {
-  background: white !important;
-  //  background-color: rgba(0,0,0,.04); 
-}
-
-.header-flex{
-  display: flex;
-  width: 100%;
-  margin: 0 0 20px 0;
-  border-radius: 15px;
-  background: rgb(255, 255, 255);
-}
-.header-flex > .content-header > span:first-child{
-  // color: #69f0ae
-  color: black;
-  font-weight: bold;
- 
-}
-
-.header-flex > .content-header > span{
-  font-size: 77%;
-}
-
-.header-flex > .content-header{
-  flex: 1 1 auto;
-  text-align: center;
-  margin: 5px;  /* and that, will result in a 10px gap */
-}
 
 
-@media only screen and (max-width: $md) {
-    mat-form-field {
-        width: 100%;
-    }
-    .mat-expansion-panel-header{
-      padding-left: 0;
-    }
-}
 
 
-.mat-expansion-panel-header{
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
 
 .mat-elevation-z8 {
     box-shadow: none;
@@ -206,17 +95,6 @@ input.example-right-align {
               0px 3px 14px 2px rgb(0 0 0 / 12%);
 }
 
-form{
-  // padding-bottom: 5%;
-  // padding: 0px 10px 1px 10px;
-  padding: 0px 20px 10px 20px;
-  background: white;
-}
-
-.content-header{
-  display: flex;
-  flex-direction: column;
-}
 
 .flex{
   display: flex;
@@ -232,14 +110,7 @@ form{
   box-sizing: border-box;
 
 }   
-mat-form-field {
-  // padding: 0px 20px 0px 20px;
-  width: 100%;
-}
 
-.item-one > form > mat-form-field:first-child{
-    padding-top: 20px;
-}
 
 .item-two{
   flex: 1;
@@ -253,52 +124,16 @@ mat-form-field {
 }
 
 
-
-.header-flex >.content-header:first-child{
-  padding-left: 15px;
-}
-
-.header-flex >.content-header:last-child{
-  padding-right: 15px;
-}
-
-
-
 @media only screen and (max-width: $md) {
 
   .toolbar-title{
     width: 70%!important;
   }
 
-  td.mat-footer-cell {
-    padding: 0;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    font-size: 75%;
-    text-align: center;
-  }
-
-
-
-  form{
-
-    padding-bottom: 0px;
-    padding: 12px 20px 12px 20px;
-  }
-
-
-
-
   .item-one{
     background: white;
     margin: 0px 0px 10px 0px !important;
   }
-
-  form {
-    position: relative;
-  }
-
-  // .header-flex)
  
   .flex{
       flex-direction: column !important;
@@ -310,7 +145,7 @@ mat-form-field {
   .body-content{
       padding: 55px 11px 50px 11px !important;
       position: relative;
-      min-height: 100vh;
+      // min-height: 100vh;
   }
 }
 
