@@ -1,5 +1,59 @@
-<app-toolbar></app-toolbar>
+<!-- <app-toolbar></app-toolbar> -->
+
+
+<div style="min-height: auto!important;
+height: 24px!important;background-color: #7c3ec9;
+    position: fixed;
+    top: 0;
+    z-index: 999999;
+    color: #fff;width: 100%;"
+    >
+ </div>
+
 <app-footer></app-footer>
+
+
+
+
+<div class="main"> 
+<div class="container">
+  <div class="item-1">
+
+
+    <form name="form">
+      <mat-form-field appearance="fill">
+        <mat-label>{{ "date_initial" | translate }}</mat-label>
+        <input matInput name="date" [matDatepicker]="picker" required />
+        <mat-datepicker-toggle
+          matSuffix
+          [for]="picker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker touchUi #picker></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field appearance="fill" floatLabel="always">
+        <mat-label>{{ "start_membership" | translate }}</mat-label>
+        <input
+          matInput
+          placeholder="0"
+          name="membership"
+          min="50"
+          pattern="[0-9]+"
+          required
+          style=" text-align: right;"
+        />
+        <span matPrefix>HU&nbsp;</span>
+        <span matSuffix>.00</span>
+      </mat-form-field>
+    </form>
+
+
+  </div>
+  <div class="item-2">
+    <table-hyper [data]="dataTable" class="virtual-custom"></table-hyper>
+  </div>
+</div>
+</div>
+
 
 <!-- <div style="padding: 90px 20px 20px"> -->
 <!-- <app-form-calc></app-form-calc> -->
@@ -49,13 +103,19 @@
   </div> -->
 
 <!-- </div> -->
-
-<div class="body-content">
+<!-- <div class="body-content">
   <div class="flex">
-    <div class="item-one" style="height:40vh
-    
-    
-    ">
+    <div class="item-one"></div>
+
+    <div class="item-two">
+      <div class="shadow-container" style="height: 70vh">
+        <table-hyper [data]="dataTable" class="virtual-custom"></table-hyper>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
       <!-- <div class="header-flex shadow-container">
         <div class="content-header">
           <span style="margin: 0">{{ "start_rewards3x" | translate }}</span>
@@ -88,12 +148,3 @@
           <span matSuffix>.00</span>
         </mat-form-field>
       </form> -->
-    </div>
-
-    <div class="item-two">
-      <div class="shadow-container" style="height: 70vh">
-        <table-hyper [data]="dataTable" class="virtual-custom"></table-hyper>
-      </div>
-    </div>
-  </div>
-</div>
