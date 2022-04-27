@@ -1,17 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { DataTable } from './models/hyper';
-import { HyperService } from './services/hyper.service';
-
+import { DataTable } from 'src/app/models/hyper';
+import { HyperService } from 'src/app/services/hyper.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-template',
+  templateUrl: './template.component.html',
+  styleUrls: ['./template.component.scss']
 })
-export class AppComponent {
+export class TemplateComponent implements OnInit {
 
-  
   // --------- variables to store calculations ------------
   private rebuy;
   private amount;
@@ -72,7 +70,4 @@ export class AppComponent {
     }));
   }
 
-
-  
 }
-

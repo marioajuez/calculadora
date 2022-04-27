@@ -1,0 +1,70 @@
+
+
+ <div style="min-height: auto!important;
+    height: 24px!important;background-color: #7c3ec9;
+    position: fixed;
+    top: 0;
+    z-index: 999999;
+    color: #fff;width: 100%;"
+    >
+</div>
+
+<main>
+    <div class="container">
+        <div class="item-form border-radius">
+
+
+            <div style=" position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);z-index: 999;">center</div>
+
+            <div class="header-flex shadow-container">
+ 
+                <div class="content-header">
+                  <span style="margin: 0;">{{'start_rewards4x'| translate }}</span>
+                  <span >{{ '40000' | number }}</span>
+                </div>
+             </div>
+
+   
+            
+      <form name="form" class="shadow-container">
+        <mat-form-field appearance="fill">
+          <mat-label>{{ "date_initial" | translate }}</mat-label>
+          <input matInput name="date" [matDatepicker]="picker" />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker touchUi #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field appearance="fill" floatLabel="always">
+          <mat-label>{{ "start_membership" | translate }}</mat-label>
+          <input
+            matInput
+            class="example-right-align"
+            placeholder="0"
+            name="membership"
+            min="50"
+            pattern="[0-9]+"
+            style=" text-align: right;"
+            required
+          />
+          <span matPrefix>HU&nbsp;</span>
+          <span matSuffix>.00</span>
+        </mat-form-field>
+      </form> 
+
+
+
+        </div>
+        <div class="item-table border-radius">
+            <table-hyper [data]="dataTable" class="virtual-custom"></table-hyper>
+        </div>
+    </div>
+
+    <app-footer></app-footer> 
+
+</main>
+

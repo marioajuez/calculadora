@@ -1,0 +1,150 @@
+:host{
+    main{
+        background: rgb(204, 205, 204);
+        padding-top: 34px;
+        height: calc(100vh - 34px);
+
+        .container{
+            position: relative;
+            height: 94%;
+            background: transparent;
+            // border: 1px solid black;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            padding: 0px 10px 0px 10px;
+          
+            .item-form{
+              position: relative;
+
+              background: #ffffff;
+              // border: 1px solid black;
+              box-sizing: border-box;
+              // flex: 0;
+              margin-top: 20px;
+              height: 180px;
+
+              form {
+                position: relative;
+                padding: 12px 20px 12px 20px;
+              }
+              
+              .mat-form-field{
+                width: 100%;
+                
+              }
+            }
+          
+            .item-table{
+              background: #ffffff;
+              margin-top: 10px;
+              flex-grow: 0;
+              flex-shrink: 1;
+              flex-basis: 100%;
+              // border: 1px solid black;
+              box-sizing: border-box;
+              // flex: 1;
+              // margin: 0px 20px 20px 20px;
+          
+            }
+        }
+    }
+}
+
+
+::ng-deep.mat-form-field-appearance-fill .mat-form-field-flex {
+  background: white !important;
+}
+
+
+::ng-deep.mat-form-field-appearance-fill .mat-form-field-flex {
+  padding: 4px 0 0!important;
+}
+
+
+
+.header-flex.shadow-container {
+  border-radius: 13px;
+}
+
+.header-flex {
+  margin: 0;
+  position: absolute;
+  z-index: 3;
+  width: auto;
+  background: #fff;
+  left: 50%; 
+  top: 0%; 
+  transform: translate(-50%, -50%);
+}
+.shadow-container{
+  border-radius: 20px;
+  box-shadow: 0 5px 5px -3px rgb(0 0 0 / 20%), 0 8px 10px 1px rgb(0 0 0 / 14%), 0 3px 14px 2px rgb(0 0 0 / 12%);
+}
+.header-flex {
+  display: flex;
+  border-radius: 15px;
+  background: #fff;
+}
+
+
+
+.header-flex > .content-header:last-child {
+  padding-right: 15px;
+}
+
+.header-flex > .content-header:first-child {
+  padding-left: 15px;
+}
+
+.header-flex> .content-header {
+  flex: 1 1 auto;
+  text-align: center;
+  margin: 5px;
+}
+
+.content-header {
+  margin: 0!important;
+}
+
+.content-header{
+  display: flex;
+  flex-direction: column;
+}
+
+
+// .header-flex{
+//   display: flex;
+//   width: 100%;
+//   margin: 0 0 20px 0;
+//   border-radius: 15px;
+//   background: rgb(255, 255, 255);
+// }
+// .header-flex > .content-header > span:first-child{
+//   // color: #69f0ae
+//   color: black;
+//   font-weight: bold;
+ 
+// }
+
+// .header-flex > .content-header > span{
+//   font-size: 77%;
+// }
+
+// .header-flex > .content-header{
+//   flex: 1 1 auto;
+//   text-align: center;
+//   margin: 5px;  /* and that, will result in a 10px gap */
+// }
+
+
+// .header-flex >.content-header:first-child{
+//   padding-left: 15px;
+// }
+
+// .header-flex >.content-header:last-child{
+//   padding-right: 15px;
+// }
+// .header-flex > .content-header > span{
+//   font-size: 75%;
+// }

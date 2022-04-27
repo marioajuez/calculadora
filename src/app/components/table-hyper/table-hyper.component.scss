@@ -70,38 +70,49 @@ $color-hyper: #7c3ec9;
 
               &.day {
                 width: 55px;
+                max-width: 55px;
+
                 // background: #d5d3d8;
               }
 
               &.date {
                 width: 120px;
+                max-width: 120px;
                 // background: #4c5150;
               }
 
               &.amount {
                 width: 200px;
+                max-width: 200px;
+
                 // background: #64547b;
               }
 
               &.daily_interest {
-                width: 200px;
+                max-width: 200px;
                 // background: #0d0d0d;
               }
 
               &.daily_rewards {
                 width: 200px;
+                max-width: 200px;
+
                 // background: #3838b1;
               }
 
               &.rebuy {
                 width: 200px;
+                max-width: 200px;
+
                 // background: #d5d3d8;
               }
 
               &.balance {
                 width: 200px;
+                max-width: 200px;
                 // background: #624392;
               }
+
 
               &:last-of-type {
                 padding-right: 0px !important;

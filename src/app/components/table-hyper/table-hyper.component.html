@@ -1,4 +1,4 @@
-<cdk-virtual-scroll-viewport [tvsItemSize]='itemSize.tvsItemSize' [headerHeight]='itemSize.headerHeight' class="custom-virtual-scroll">
+<cdk-virtual-scroll-viewport [tvsItemSize]='itemSize.tvsItemSize' [headerHeight]='itemSize.headerHeight' class="custom-virtual-scroll border-radius">
     <table mat-table [dataSource]="dataSource" style="position: relative;">
       <tr mat-header-row *matHeaderRowDef="displayedColumns;sticky:true"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns; let i = index" [ngStyle]="{ 'background-color': (row.index === 76 )? 'red':'white'}">></tr>

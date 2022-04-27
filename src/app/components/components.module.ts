@@ -11,6 +11,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormCalcComponent } from './form-calc/form-calc.component';
+import { TemplateComponent } from './template/template.component';
 
 
 
@@ -23,6 +24,7 @@ import { FormCalcComponent } from './form-calc/form-calc.component';
     ToolbarComponent,
     FooterComponent,
     FormCalcComponent,
+    TemplateComponent,
 
   ],
   imports: [
@@ -43,6 +45,7 @@ import { FormCalcComponent } from './form-calc/form-calc.component';
     ToolbarComponent,
     FooterComponent,
     FormCalcComponent,
+    TemplateComponent
   ]
 })
 export class ComponentsModule { }
